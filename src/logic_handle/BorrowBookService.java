@@ -141,13 +141,13 @@ public class BorrowBookService {
             System.out.print("Bạn muốn mượn bao nhiêu cuốn sách này: ");
             int quantity = -1;
             do {
-                bookQuantity = new Scanner(System.in).nextInt();
-                if (bookQuantity > 0 && bookQuantity <= 3) {
+                quantity = new Scanner(System.in).nextInt();
+                if (quantity > 0 && quantity <= 3) {
                     break;
                 }
                 System.out.println("Bạn chỉ được mượn tối đa 3 cuốn cho 1 đầu sách, mờ nhập lại: ");
 
-            } while (bookQuantity < 0 || bookQuantity > 3);
+            } while (quantity < 0 || quantity > 3);
 
             // nhập từng cuốn sách và số lượng cuốn tương ứng
             BookBorrowDetail bookBorrowDetail = new BookBorrowDetail(book, quantity);
